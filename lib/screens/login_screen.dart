@@ -9,7 +9,7 @@ class LoginScreen extends StatelessWidget {
     // ignore: prefer_const_constructors
     return Scaffold(
       appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(100),
+        preferredSize: const Size.fromHeight(50),
         child: CustomTopBar(),
       ),
     );
