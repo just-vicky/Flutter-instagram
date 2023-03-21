@@ -70,11 +70,14 @@ class BodyContent extends StatelessWidget {
                       'Forgot your login details?',
                       style: TextStyle(color: Colors.black45),
                     ),
-                    Text(
-                      'Get help logging in.',
-                      style: TextStyle(
-                          color: Color.fromRGBO(56, 97, 178, 1),
-                          fontWeight: FontWeight.bold),
+                    TextButton(
+                      onPressed: null,
+                      child: Text(
+                        'Get help logging in.',
+                        style: TextStyle(
+                            color: Color.fromRGBO(56, 97, 178, 1),
+                            fontWeight: FontWeight.bold),
+                      ),
                     ),
                   ],
                 ),
@@ -90,7 +93,10 @@ class BodyContent extends StatelessWidget {
                       ),
                     ),
                   ),
-                  Text('OR'),
+                  Text(
+                    'OR',
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
                   Expanded(
                     child: Container(
                       margin: const EdgeInsets.only(
@@ -107,21 +113,36 @@ class BodyContent extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Icon(
-                    Icons.facebook_rounded,
-                    color: Color.fromRGBO(37, 119, 241, 1),
-                  ),
-                  Text(
-                    'Log in with Facebook',
-                    style: TextStyle(
-                        color: Color.fromRGBO(37, 119, 241, 1),
-                        fontWeight: FontWeight.bold),
+                  TextButton.icon(
+                    onPressed: null,
+                    icon: Icon(
+                      Icons.facebook_rounded,
+                      color: Color.fromRGBO(37, 119, 241, 1),
+                    ),
+                    label: Text(
+                      'Log in with Facebook',
+                      style: TextStyle(
+                          color: Color.fromRGBO(37, 119, 241, 1),
+                          fontWeight: FontWeight.bold),
+                    ),
                   )
                 ],
-              )
+              ),
             ],
           ),
         ),
+        // Column(
+        //   mainAxisAlignment: MainAxisAlignment.end,
+        //   children: [
+        //     Row(
+        //       mainAxisAlignment: MainAxisAlignment.center,
+        //       children: [
+        //         Text("Don't have an account"),
+        //         TextButton(onPressed: null, child: Text("Sign up"))
+        //       ],
+        //     )
+        //   ],
+        // )
       ],
     );
   }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:instagram_ui/components/login_page_cpmponents/topbar.dart';
 import '../components/login_page_cpmponents/mainBody.dart';
+import '../components/login_page_cpmponents/bottomBar.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -15,6 +16,7 @@ class LoginScreen extends StatelessWidget {
         child: CustomTopBar(),
       ),
       body: BodyContent(),
+      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }
