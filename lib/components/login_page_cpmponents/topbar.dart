@@ -13,7 +13,8 @@ class CustomTopBar extends StatelessWidget {
       title: Text(
         'English (India)',
         textAlign: TextAlign.center,
-        style: TextStyle(color: Colors.grey[600], fontSize: 13),
+        style: TextStyle(
+            color: Colors.grey[600], fontSize: 13, fontFamily: 'ProximaNova'),
       ),
       backgroundColor: Colors.white,
       elevation: 0,

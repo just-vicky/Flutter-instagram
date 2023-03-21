@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+
 import 'package:instagram_ui/components/login_page_cpmponents/topbar.dart';
+import '../components/login_page_cpmponents/mainBody.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -12,6 +14,7 @@ class LoginScreen extends StatelessWidget {
         preferredSize: const Size.fromHeight(50),
         child: CustomTopBar(),
       ),
+      body: BodyContent(),
     );
   }
 }
