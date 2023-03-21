@@ -1,7 +1,8 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import '../../route/route.dart' as route;
 
 class BodyContent extends StatelessWidget {
   const BodyContent({super.key});
@@ -43,7 +44,7 @@ class BodyContent extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              Container(
+              SizedBox(
                 width: double.infinity,
                 child: Opacity(
                   opacity: 0.6,
@@ -61,8 +62,8 @@ class BodyContent extends StatelessWidget {
                   ),
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(top: 8, bottom: 8),
+              SizedBox(
+                height: 40,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -71,7 +72,8 @@ class BodyContent extends StatelessWidget {
                       style: TextStyle(color: Colors.black45),
                     ),
                     TextButton(
-                      onPressed: null,
+                      onPressed: () => Navigator.pushNamed(
+                          context, route.forgotYourPassword),
                       child: Text(
                         'Get help logging in.',
                         style: TextStyle(
