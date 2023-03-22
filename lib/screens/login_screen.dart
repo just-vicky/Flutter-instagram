@@ -11,12 +11,18 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     // ignore: prefer_const_constructors
     return Scaffold(
-      appBar: PreferredSize(
-        preferredSize: const Size.fromHeight(50),
-        child: CustomTopBar(),
+      // appBar: PreferredSize(
+      //   preferredSize: const Size.fromHeight(50),
+      //   child: CustomTopBar(),
+      // ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          CustomTopBar(),
+          BodyContent(),
+          CustomBottomBar(),
+        ],
       ),
-      body: BodyContent(),
-      bottomNavigationBar: CustomBottomBar(),
     );
   }
 }

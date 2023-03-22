@@ -12,15 +12,6 @@ class ForgotPasswordScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          'Login help',
-          style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.w600, fontSize: 24),
-        ),
-        elevation: 0,
-        backgroundColor: Colors.white,
-      ),
       body: CustomBody(),
     );
   }

@@ -8,22 +8,38 @@ class CustomBottomBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BottomAppBar(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Text("Don't have an account?"),
-          TextButton(
-              onPressed: () => Navigator.pushNamed(context, route.signUpPage1),
-              child: Text(
-                'Sign up',
-                style: TextStyle(
-                    color: Color.fromRGBO(56, 97, 178, 1),
-                    fontWeight: FontWeight.bold),
-              ))
-        ],
-      ),
+    return Column(
+      children: [
+        Divider(
+          color: Colors.black,
+        ),
+        Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Don't have an account?",
+                  style: TextStyle(color: Colors.black45),
+                ),
+                TextButton(
+                  onPressed: () =>
+                      Navigator.pushNamed(context, route.signUpPage1),
+                  child: Text(
+                    'Sign up',
+                    style: TextStyle(
+                        color: Color.fromRGBO(56, 97, 178, 1),
+                        fontWeight: FontWeight.bold),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 5,
+            )
+          ],
+        ),
+      ],
     );
   }
 }
