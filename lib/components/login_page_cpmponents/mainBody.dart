@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:instagram_ui/components/login_page_cpmponents/topbar.dart';
 import '../../route/route.dart' as route;
 
 class BodyContent extends StatelessWidget {
@@ -10,7 +11,7 @@ class BodyContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
           padding: EdgeInsets.only(left: 20, right: 20),
@@ -30,7 +31,7 @@ class BodyContent extends StatelessWidget {
                   obscureText: true,
                   decoration: InputDecoration(
                     filled: true,
-                    fillColor: Colors.grey[100],
+                    fillColor: Colors.grey[00],
                     border: OutlineInputBorder(),
                     labelText: 'Phone number, email or username',
                   ),
@@ -96,7 +97,7 @@ class BodyContent extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 10,
+                height: 20,
               ),
               Row(
                 children: [
@@ -104,8 +105,8 @@ class BodyContent extends StatelessWidget {
                     child: Container(
                       margin: const EdgeInsets.only(right: 10),
                       child: Divider(
-                        color: Colors.grey[700],
-                        height: 50,
+                        color: Colors.grey[500],
+                        height: 36,
                       ),
                     ),
                   ),
@@ -119,7 +120,7 @@ class BodyContent extends StatelessWidget {
                         left: 10,
                       ),
                       child: Divider(
-                        color: Colors.grey[700],
+                        color: Colors.grey[500],
                         height: 36,
                       ),
                     ),
@@ -147,6 +148,7 @@ class BodyContent extends StatelessWidget {
             ],
           ),
         ),
+        BottomAppBar()
       ],
     );
   }
