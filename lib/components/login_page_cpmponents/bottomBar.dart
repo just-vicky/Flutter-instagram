@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import '../../route/route.dart' as route;
 
 class CustomBottomBar extends StatelessWidget {
   const CustomBottomBar({super.key});
@@ -14,7 +15,7 @@ class CustomBottomBar extends StatelessWidget {
         children: [
           Text("Don't have an account?"),
           TextButton(
-              onPressed: null,
+              onPressed: () => Navigator.pushNamed(context, route.signUpPage1),
               child: Text(
                 'Sign up',
                 style: TextStyle(

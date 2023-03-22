@@ -16,36 +16,47 @@ class BodyContent extends StatelessWidget {
           padding: EdgeInsets.only(left: 20, right: 20),
           child: Column(
             children: [
-              Text(
-                'Instagram',
-                style: TextStyle(
-                    color: Colors.black, fontFamily: 'Billabong', fontSize: 60),
+              SizedBox(
+                height: 60,
+                child: Image.network(
+                    'https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png'),
               ),
               SizedBox(
                 height: 10,
               ),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                  border: OutlineInputBorder(),
-                  labelText: 'Phone number, email or username',
+              SizedBox(
+                height: 50,
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    filled: true,
+                    fillColor: Colors.grey[100],
+                    border: OutlineInputBorder(),
+                    labelText: 'Phone number, email or username',
+                  ),
                 ),
               ),
               SizedBox(
                 height: 10,
               ),
-              TextField(
-                obscureText: true,
-                decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Password',
-                    suffixIcon: Icon(Icons.visibility_off_outlined)),
+              SizedBox(
+                height: 50,
+                child: TextField(
+                  obscureText: true,
+                  decoration: InputDecoration(
+                      filled: true,
+                      fillColor: Colors.grey[100],
+                      border: OutlineInputBorder(),
+                      labelText: 'Password',
+                      suffixIcon: Icon(Icons.visibility_off_outlined)),
+                ),
               ),
               SizedBox(
                 height: 10,
               ),
               SizedBox(
                 width: double.infinity,
+                height: 50,
                 child: Opacity(
                   opacity: 0.6,
                   child: ElevatedButton(
@@ -83,6 +94,9 @@ class BodyContent extends StatelessWidget {
                     ),
                   ],
                 ),
+              ),
+              SizedBox(
+                height: 10,
               ),
               Row(
                 children: [
@@ -133,18 +147,6 @@ class BodyContent extends StatelessWidget {
             ],
           ),
         ),
-        // Column(
-        //   mainAxisAlignment: MainAxisAlignment.end,
-        //   children: [
-        //     Row(
-        //       mainAxisAlignment: MainAxisAlignment.center,
-        //       children: [
-        //         Text("Don't have an account"),
-        //         TextButton(onPressed: null, child: Text("Sign up"))
-        //       ],
-        //     )
-        //   ],
-        // )
       ],
     );
   }
