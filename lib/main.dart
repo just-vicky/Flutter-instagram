@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(primarySwatch: Colors.blue),
       onGenerateRoute: route.controller,
-      initialRoute: route.forgotYourPassword,
+      initialRoute: route.loginPage,
     );
   }
 }

@@ -1,24 +1,41 @@
+// ignore_for_file: prefer_final_fields, sort_child_properties_last, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 
-class CustomTopBar extends StatelessWidget {
+class CustomTopBar extends StatefulWidget {
   const CustomTopBar({super.key});
+
+  @override
+  State<CustomTopBar> createState() => _CustomTopBarState();
+}
+
+class _CustomTopBarState extends State<CustomTopBar> {
+  List<String> _language = ['A', 'B', 'C', 'D'];
+  String? _selectedLanguage;
+
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      leading: Icon(
-        Icons.settings,
-        color: Colors.grey[600],
+      title: DropdownButtonHideUnderline(
+        child: DropdownButton(
+          hint: Text('English(India)'),
+          value: _selectedLanguage,
+          items: _language.map((e) {
+            return DropdownMenuItem(
+              child: Text(e),
+              value: e,
+            );
+          }).toList(),
+          onChanged: (value) {
+            setState(() {
+              _selectedLanguage = value!;
+            });
+          },
+        ),
       ),
-      leadingWidth: 40,
-      title: Text(
-        'English (India)',
-        textAlign: TextAlign.center,
-        style: TextStyle(
-            color: Colors.grey[600], fontSize: 13, fontFamily: 'ProximaNova'),
-      ),
+      centerTitle: true,
       backgroundColor: Colors.white,
       elevation: 0,
-      centerTitle: true,
     );
   }
 }

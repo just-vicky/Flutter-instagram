@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import '../../route/route.dart' as route;
 
 class CustomBody extends StatelessWidget {
   const CustomBody({super.key});
@@ -17,7 +18,7 @@ class CustomBody extends StatelessWidget {
             padding: EdgeInsets.all(40),
             child: Column(children: [
               Text(
-                'Find your Account',
+                'Find your account',
                 style: TextStyle(fontWeight: FontWeight.w600, fontSize: 25),
               ),
               Padding(
@@ -33,20 +34,26 @@ class CustomBody extends StatelessWidget {
               )
             ]),
           ),
-          TextField(
-            decoration: InputDecoration(
-                border: OutlineInputBorder(),
-                label: Text('Username, email or phone')),
+          SizedBox(
+            height: 50,
+            child: TextField(
+              decoration: InputDecoration(
+                  filled: true,
+                  fillColor: Colors.grey[100],
+                  border: OutlineInputBorder(),
+                  label: Text('Username, email or phone')),
+            ),
           ),
           SizedBox(
             height: 10,
           ),
           SizedBox(
             width: double.infinity,
+            height: 50,
             child: Opacity(
               opacity: 0.5,
               child: ElevatedButton(
-                onPressed: null,
+                onPressed: () => Navigator.pushNamed(context, route.loginPage),
                 child: Text(
                   'Next',
                   style: TextStyle(color: Colors.white),
@@ -66,6 +73,9 @@ class CustomBody extends StatelessWidget {
               style: TextStyle(
                   color: Colors.blue[400], fontWeight: FontWeight.w400),
             ),
+          ),
+          SizedBox(
+            height: 5,
           ),
           Row(
             children: [
@@ -97,6 +107,7 @@ class CustomBody extends StatelessWidget {
           ),
           SizedBox(
             width: double.infinity,
+            height: 50,
             child: ElevatedButton.icon(
               onPressed: null,
               icon: Icon(
