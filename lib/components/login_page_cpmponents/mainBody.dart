@@ -61,7 +61,8 @@ class BodyContent extends StatelessWidget {
                 child: Opacity(
                   opacity: 0.6,
                   child: ElevatedButton(
-                    onPressed: null,
+                    onPressed: () =>
+                        Navigator.pushNamed(context, route.homePage),
                     child: Text(
                       "Log In",
                       style: TextStyle(color: Colors.white30),

@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 
 import 'package:instagram_ui/components/login_page_cpmponents/topbar.dart';
@@ -18,9 +20,9 @@ class LoginScreen extends StatelessWidget {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          CustomTopBar(),
-          BodyContent(),
-          CustomBottomBar(),
+          const CustomTopBar(),
+          const BodyContent(),
+          const CustomBottomBar(),
         ],
       ),
     );

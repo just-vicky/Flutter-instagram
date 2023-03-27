@@ -10,7 +10,7 @@ class CustomBottomBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Divider(
+        const Divider(
           color: Colors.black,
         ),
         Column(
@@ -18,14 +18,14 @@ class CustomBottomBar extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Don't have an account?",
                   style: TextStyle(color: Colors.black45),
                 ),
                 TextButton(
                   onPressed: () =>
                       Navigator.pushNamed(context, route.signUpPage1),
-                  child: Text(
+                  child: const Text(
                     'Sign up',
                     style: TextStyle(
                         color: Color.fromRGBO(56, 97, 178, 1),
@@ -34,7 +34,7 @@ class CustomBottomBar extends StatelessWidget {
                 ),
               ],
             ),
-            SizedBox(
+            const SizedBox(
               height: 5,
             )
           ],
