@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-import 'package:instagram_ui/screens/home_screen.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class HomeScreenAppBar extends StatefulWidget {
@@ -13,7 +10,7 @@ class HomeScreenAppBar extends StatefulWidget {
 
 class _HomeScreenAppBarState extends State<HomeScreenAppBar> {
   String? _value;
-  List<String> _index = ['A', 'B'];
+  final List<String> _index = ['A', 'B'];
   @override
   Widget build(BuildContext context) {
     return AppBar(
@@ -21,35 +18,33 @@ class _HomeScreenAppBarState extends State<HomeScreenAppBar> {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Container(
-            child: DropdownButton(
-              hint: Container(
-                padding: const EdgeInsets.only(top: 8),
-                height: 500,
-                child: Image.network(
-                    'https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png'),
-              ),
-              value: _value,
-              icon: const Icon(Icons.keyboard_arrow_down),
-              onChanged: (String? item) {
-                setState(() {
-                  _value = item;
-                });
-              },
-              items: _index.map((e) {
-                return DropdownMenuItem(
-                  value: e,
-                  child: TextButton(
-                    onPressed: null,
-                    child: Text(e),
-                  ),
-                );
-              }).toList(),
+          DropdownButton(
+            hint: Container(
+              padding: const EdgeInsets.only(top: 8),
+              height: 500,
+              child: Image.network(
+                  'https://logos-download.com/wp-content/uploads/2016/03/Instagram_Logo_2016.png'),
             ),
+            value: _value,
+            icon: const Icon(Icons.keyboard_arrow_down),
+            onChanged: (String? item) {
+              setState(() {
+                _value = item;
+              });
+            },
+            items: _index.map((e) {
+              return DropdownMenuItem(
+                value: e,
+                child: TextButton(
+                  onPressed: null,
+                  child: Text(e),
+                ),
+              );
+            }).toList(),
           ),
           Row(
             children: [
-              IconButton(
+              const IconButton(
                 onPressed: null,
                 icon: Icon(
                   Icons.favorite_border,
@@ -58,7 +53,7 @@ class _HomeScreenAppBarState extends State<HomeScreenAppBar> {
               ),
               Stack(
                 children: [
-                  IconButton(
+                  const IconButton(
                     onPressed: null,
                     icon: Icon(
                       FontAwesomeIcons.facebookMessenger,
@@ -75,7 +70,7 @@ class _HomeScreenAppBarState extends State<HomeScreenAppBar> {
                         shape: BoxShape.circle,
                         color: Colors.red[600],
                       ),
-                      child: Center(
+                      child: const Center(
                         child: Text(
                           '4',
                           style: TextStyle(
